@@ -1,0 +1,17 @@
+<mat-card class="login">
+    <h3>Radicar una PQR</h3>
+    <br>
+    <h1 *ngIf="cargando">cargando...</h1>
+<form [formGroup]="formGroupPqr" autocomplete="off" (submit)="crear()" class="formLogin">
+<mat-form-field>
+<input matInput placeholder="Asunto" formControlName="titulo">
+</mat-form-field>
+<br>
+<mat-form-field>
+  <textarea matInput placeholder="Descripcion" formControlName="descripcion"></textarea>
+</mat-form-field>
+<br>
+<br>
+<button type="submit"  mat-raised-button color="primary">Enviar</button>
+</form>
+  </mat-card>

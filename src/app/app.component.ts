@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'pqr-app';
   autenticado = false;
+  nombre:string;
+  id:number;
 
   constructor(private router:Router){}
 

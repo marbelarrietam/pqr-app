@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
+import { Router } from '@angular/router';
+import { ApiConsumerService } from '../servicios/api-consumer.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router, private service:ApiConsumerService, public appComponent:AppComponent) { }
 
   ngOnInit() {
   }

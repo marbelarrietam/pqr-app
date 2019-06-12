@@ -7,19 +7,28 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
+import { HttpClientModule } from '@angular/common/http'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NuevapqrComponent } from './nuevapqr/nuevapqr.component';
+import { ConsultapqrComponent } from './consultapqr/consultapqr.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LoginComponent,
-    RegistroUsuarioComponent
+    RegistroUsuarioComponent,
+    NuevapqrComponent,
+    ConsultapqrComponent
   ],
   imports: [
     MaterialModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

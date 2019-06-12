@@ -8,3 +8,14 @@ html, body {
     background-color: #f0f0f0;
     font-family: Roboto, 'Helvetice New', 'Arial', sans-serif
   }
+
+  .login{
+    margin: 0 auto;
+    margin-top: 5%;
+    width: 40%;
+}
+
+.formLogin{
+    display: flex;
+    flex-direction: column;
+}
