@@ -1,0 +1,14 @@
+.card-queja{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.card{
+    margin:20px;
+}
+
+.input-busqueda{
+    height: 30px;
+    width: 400px;
+}

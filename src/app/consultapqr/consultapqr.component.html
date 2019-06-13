@@ -1,3 +1,47 @@
-<p>
-  consultapqr works!
-</p>
+<div>
+  <div style="margin:30px">
+    <div style="display: flex; flex-direction: column">
+    <input class="input-busqueda" placeholder="Escriba el radicado de su pqr"  [(ngModel)]="busqueda">
+    <br>
+    <button style="width: 33%" mat-raised-button color="primary" (click)="consultar()">
+      Buscar
+    </button>
+  </div>
+    <br>
+    <h1 *ngIf="cargando">cargando...</h1>
+  </div>
+
+  <div *ngIf="resultado">
+    <mat-card class="card">
+      <div class="card-queja">
+      <h2>
+        {{pqr.titulo}}
+      </h2>
+      <p>
+        {{pqr.descripcion}}
+      </p>
+    </div>
+    <div>
+      <h4>Respuestas</h4>
+      <ul>
+      <li *ngFor="let item of pqr.comentarios">
+          {{item.usuario.nombre}} responde a su solicitud que {{item.comentario}} 
+      </li>
+    </ul>
+    </div>
+    </mat-card>
+  </div>
+
+  <div  *ngIf="resultado">
+    <mat-card class="card">
+      <div style="display: flex; flex-direction: column;">
+       <h6>Responder pqr:</h6>
+        <textarea style="height: 100px" [(ngModel)]="nuevoComentario"></textarea>
+        <br>
+        <button style="width: 33%" mat-raised-button color="primary" (click)="responder()">
+            Responder
+          </button>
+      </div>
+    </mat-card>
+  </div>
+</div>
